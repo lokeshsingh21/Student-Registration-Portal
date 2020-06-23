@@ -1,0 +1,61 @@
+
+body{
+	font-family: Roboto;
+	background: -webkit-linear-gradient(to right, #78ffd6, #007991);
+	background: linear-gradient(to right, #78ffd6, #007991); 
+}
+
+select{
+	height: 30px;
+}
+
+h3{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+h4{
+	font-weight: 800;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	height: 40px;
+	line-height: 40px;
+}
+
+.head{
+	font-size: 20px;
+}
+
+.input{
+	width: 400px;
+}
+
+.container{
+	margin-top: 15px;
+}
+
+#skill span{
+	background-color: red;
+	display: inline-block;
+	height: 40px;
+	color: white;
+	width: 0px;
+	margin-right: 20px;
+	text-align: center;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+#skill li:hover span{
+	width: 40px;
+	opacity: 1.0;
+}
+
+.reqd{
+	color: #d80000;
+}

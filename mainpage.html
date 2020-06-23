@@ -1,52 +1,52 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>About Yourself</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 	<div class="container">
-		<br>
 		<h3>Register</h3>
 		<br>
 		<nav class="navbar navbar-light bg-light">
-			<a href="mainpage.html">About yourself</a>
+			<a href="mainpage.html">About Yourself</a>
 			<a href="contact.html">Contact</a>
 			<a href="education.html">Education</a>
 			<a href="preview.html">Preview</a>
 		</nav>
 		<br>
-		<form>
-			<h3>Basic Info</h3>
-			<h6>Name</h6>
-			<div class="input-group">
+		<form action="contact.html" method="post">
+			<h4>Basic Info</h4><br>
+
+			<label class="head" for="name">Name<span class="reqd">*</span></label>
+			<div class="input-group" name="name">
 				<input type="text" placeholder="First" class="form-control mr-1" required>	
-				<input type="text" placeholder="Last" class="form-control ml-1"
-				required>
-			</div>
-			<br>
-			<h6>Profile Photo</h6>
-			<input type='file' onchange="readURL(this);" />
-			<br><br>
-    		<img id="blah" src="#" alt="your image" />
-			<br><br>
-			<h6>DOB</h6>
-			<input type="date" required>
-			<br>
-			<br>
-			<h6>Phone</h6>
-			<input type="tel" maxlength="10" required>
-			<br>
-			<br>
-			<h6>Email</h6>
-			<input type="email" required>
+				<input type="text" placeholder="Last" class="form-control ml-1" required>
+			</div><br>
+
+			<label class="head" for="pic">Profile Photo</label><br>	
+			<input type="file" name="pic" onchange="readURL(this);"/><br><br>
+    		<img id="image" src="#"><br><br>
+
+			<label class="head" for="dob">Date Of Birth<span class="reqd">*</span></label><br>
+			<input type="date" name="dob" required><br><br>
+
+			<label class="head" for="phone">Phone<span class="reqd">*</span></label><br>
+			<input type="tel" name="phone" maxlength="10" required><br><br>
+
+			<label class="head" for="email">Email<span class="reqd">*</span></label><br>
+			<input class="input" name="email" type="email" required><br>
+
+			<input type="submit" class="btn btn-primary mt-5" value="Next"></input>
 		</form>
-		<a href="contact.html" class="btn btn-primary mt-5">Next</a>
 	</div>
+
 	<script type="text/javascript" src="script.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

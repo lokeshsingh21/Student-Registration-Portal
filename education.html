@@ -1,46 +1,60 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Education</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 	<div class="container">
-		<br>
 		<h3>Register</h3>
 		<br>
 		<nav class="navbar navbar-light bg-light">
-			<a href="mainpage.html">About yourself</a>
+			<a href="mainpage.html">About Yourself</a>
 			<a href="contact.html">Contact</a>
 			<a href="education.html">Education</a>
 			<a href="preview.html">Preview</a>
 		</nav>
 		<br>
-		<form>
-		<h6>Higher Education</h6>
-	    <select class="form-control" id="select">
-	      <option>B.E/B.Tech</option>
-	      <option>M.E/M.Tech</option>
-	      <option>BCA</option>
-	    </select>
-	    <br>
-	    <h6>University</h6>
-	    <input type="text" placeholder="University">
-	    <br><br>
-		  <h6>Skills</h6>
-		  <select id="selectbox"></select><br><br>
-		  <button id="skills" class="btn-xs btn-danger">+Add Skill</button>
-		  <br><br>
-		 <h6>Resume</h6>
-		<input type="file" name="img" accept="pdf/*" required>
-		<br>
+		<form action="preview.html" method="post">
+
+			<label class="head" for="edu">Higher Education<span class="reqd">*</span></label><br>
+		    <select class="input" name="edu" required>
+		      <option selected disabled hidden>Select</option>
+		      <option>B.E/B.Tech</option>
+		      <option>M.E/M.Tech</option>
+		      <option>BCA</option>
+		      <option>B.Sc</option>
+		    </select><br><br>
+
+		    <label class="head" for="univ">University<span class="reqd">*</span></label><br>
+		    <input class="input" name="univ" type="text" placeholder="University" required><br><br>
+
+			  <label class="head" for="Skill">Skills</label><br>
+			  <select id="selectbox" name="Skill" onchange="addSkill(this)">
+			  	<option selected disabled hidden>Select</option>
+			  	<option>C++</option>
+			  	<option>Java</option>
+			  	<option>Python</option>
+			  	<option>HTML</option>
+			  	<option>CSS</option>
+			  	<option>JavaScript</option>
+			  </select><br><br>
+			  <ul id="skill"></ul><br>
+
+			<label class="head" for="resume">Resume<span class="reqd">*</span></label><br>
+			<input type="file" name="resume" accept="pdf/*" required><br>
 		 
+		 	<a href="contact.html" class="btn btn-primary mt-5 mr-5">Back</a>
+		 	<input type="submit" class="btn btn-primary mt-5" value="Next"></input>
 		</form>
-		<a href="contact.html" class="btn btn-primary mt-5 mr-5">Back</a>
-		<a href="preview.html" class="btn btn-primary mt-5">Next</a>
 	</div>
 
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script.js"></script>>
 </body>
 </html>
